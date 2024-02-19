@@ -18,7 +18,7 @@ func (t *AccountController) createCustomer(tx *gin.Context) {
 		tx.JSON(http.StatusBadRequest, gin.H{"error": e.Error()})
 		return
 	}
-	tx.JSON(http.StatusOK, gin.H{"message": "Customer created","data":c})
+	tx.JSON(http.StatusOK, gin.H{"message": "Customer created", "data": c})
 }
 
 func (t *AccountController) updateCustomer(tx *gin.Context) {

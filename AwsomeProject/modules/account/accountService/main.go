@@ -12,11 +12,11 @@ func autoMigrate(db *gorm.DB) {
 
 func Init(db *gorm.DB, route *gin.Engine) error {
 	autoMigrate(db)
-	accountController := AccountController{AccountService: AccountService{CustomerRepo: CustomerRepo{db: db}}}
+	accountController := AccountController{AccountService: AccountService{CustomerRepo: db}}
 	accountGroup := route.Group("/account")
 	{
 		accountGroup.POST("/create", accountController.createCustomer)
-		accountGroup.POST("/udt", accountController.updateCustomer)
+		accountGroup.POST("/update", accountController.updateCustomer)
 		accountGroup.GET(":id", accountController.FindCustomerById)
 	}
 	return nil

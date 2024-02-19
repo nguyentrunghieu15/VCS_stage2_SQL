@@ -41,8 +41,8 @@ type CustomerUdtSchema struct {
 	Zipcode  string `json:"zipcode"`
 }
 
-func CreateCustomerUdtObj(v CustomerUdtSchema) account.Customer {
-	return account.Customer{
+func CreateCustomerUdtObj(v CustomerUdtSchema) *account.Customer {
+	return &account.Customer{
 		Model:    gorm.Model{ID: v.Id},
 		Fname:    v.Fname,
 		Lname:    v.Lname,
