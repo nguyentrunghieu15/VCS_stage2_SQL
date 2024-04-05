@@ -17,8 +17,8 @@
 │   └───test
 └───Udemy Asignment
 ```
-- AwsomeProject : This is a source code including example implement CURD and Transaction. Source  using Go and GORM to code
-- Udemy Asignment : Containing SQL script of assignment for each section Udemy Course 
+- AwsomeProject : Source code triển khai CRUD cơ bản cùng với Transaction. Source  sử dụng Go and và thư viện GORM
+- Udemy Asignment : Chứa SQL script của các bài tập trong mỗi section Udemy Course 
 
 # Running
 
